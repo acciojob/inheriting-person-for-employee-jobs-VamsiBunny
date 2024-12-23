@@ -11,12 +11,12 @@ Person.prototype.greet = function() {
 
 // Create the Employee class that extends the Person class
 function Employee(name, age, jobTitle) {
-  // Call the Person constructor to set the name and age
+  // Call the Person constructor to initialize name and age
   Person.call(this, name, age);
   this.jobTitle = jobTitle;
 }
 
-// Inherit methods from Person
+// Set up inheritance: Employee inherits from Person
 Employee.prototype = Object.create(Person.prototype);
 Employee.prototype.constructor = Employee;
 
@@ -28,3 +28,4 @@ Employee.prototype.jobGreet = function() {
 // Do not change code below this line
 window.Person = Person;
 window.Employee = Employee;
+
